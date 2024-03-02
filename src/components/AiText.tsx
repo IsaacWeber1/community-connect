@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
-const AiwithText = () => {
+const AiText = () => {
     const genAI = new GoogleGenerativeAI('AIzaSyBLTpKC-aCVOe3CLEKXTb03qWp8C3jaXAQ');
 
     const [search, setSearch] = useState('');
@@ -42,4 +42,4 @@ const AiwithText = () => {
     );
 };
 
-export default AiwithText;
+export default AiText;

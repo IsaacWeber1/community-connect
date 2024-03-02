@@ -2,7 +2,8 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import { Form } from 'react-bootstrap';
-import { FirstQuestionSet } from './form-components/FirstQuestionSet'
+import { FirstQuestionSet } from './form-components/FirstQuestionSet';
+import AiText from './components/AiText';
 
 function App() {
   return (
