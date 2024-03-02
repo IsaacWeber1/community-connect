@@ -27,7 +27,7 @@ export function FirstQuestionSet(): JSX.Element {
                 </Form.Control>
             </Form.Group>
 
-            <Form.Group controlId="reasonForTrip">
+            <Form.Group controlId="needs">
                 <Form.Label>Do you have any specific needs? (Consider: food, phone, money, housing/lodging, job, language learning resources)</Form.Label>
                 <Form.Control
                 value={purpose}
@@ -35,7 +35,7 @@ export function FirstQuestionSet(): JSX.Element {
                 </Form.Control>
             </Form.Group>
 
-            <Form.Group controlId="reasonForTrip">
+            <Form.Group controlId="specificLocationPreferences">
                 <Form.Label>If you are travelling for fun, are there specific locations or sites you are interested in visiting?</Form.Label>
                 <Form.Control
                 value={purpose}
@@ -43,7 +43,7 @@ export function FirstQuestionSet(): JSX.Element {
                 </Form.Control>
             </Form.Group>
 
-            <Form.Group controlId="reasonForTrip">
+            <Form.Group controlId="previouslyTravelledToLocation">
                 <Form.Label>Have you previously travelled to this location?</Form.Label>
                 <Form.Control
                 value={purpose}
@@ -51,7 +51,7 @@ export function FirstQuestionSet(): JSX.Element {
                 </Form.Control>
             </Form.Group>
 
-            <Form.Group controlId="reasonForTrip">
+            <Form.Group controlId="ageOfUser">
                 <Form.Label>How old are you?</Form.Label>
                 <Form.Control
                 value={purpose}
@@ -59,15 +59,15 @@ export function FirstQuestionSet(): JSX.Element {
                 </Form.Control>
             </Form.Group>
 
-            <Form.Group controlId="reasonForTrip">
-                <Form.Label>What are you interested in learning about?</Form.Label>
+            <Form.Group controlId="interests/hobbies">
+                <Form.Label>What are your interests/hobbies?</Form.Label>
                 <Form.Control
                 value={purpose}
                 onChange={(event: React.ChangeEvent<HTMLInputElement>) => setPurpose(event.target.value)}>
                 </Form.Control>
             </Form.Group>
 
-            <Form.Group controlId="reasonForTrip">
+            <Form.Group controlId="homeCountry/Location">
                 <Form.Label>Where are you from?</Form.Label>
                 <Form.Control
                 value={purpose}
@@ -75,7 +75,7 @@ export function FirstQuestionSet(): JSX.Element {
                 </Form.Control>
             </Form.Group>
 
-            <Form.Group controlId="reasonForTrip">
+            <Form.Group controlId="hasDietaryRestrictions">
                 <Form.Label>Do you have any dietary restrictions?</Form.Label>
                 <Form.Control
                 value={purpose}
@@ -83,7 +83,7 @@ export function FirstQuestionSet(): JSX.Element {
                 </Form.Control>
             </Form.Group>
 
-            <Form.Group controlId="reasonForTrip">
+            <Form.Group controlId="budgetForTrip">
                 <Form.Label>What is your budget?</Form.Label>
                 <Form.Control
                 value={purpose}
