@@ -23,7 +23,8 @@ const AiwithText = () => {
         setLoading(false);
     }
 
-    const handleChangeSearch = (e) => {
+    const handleChangeSearch = (e: { target: { value: React.SetStateAction<string>; }; }) => {
+        // ii have no idea what the line above means my ide auto changed it
         setSearch(e.target.value);
     }
 
