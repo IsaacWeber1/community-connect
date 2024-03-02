@@ -7,7 +7,9 @@ import { FirstQuestionSet } from './form-components/FirstQuestionSet'
 function App() {
   return (
     <div className="App">
+      <h1>Connections AI</h1>
       <FirstQuestionSet></FirstQuestionSet>
+      <h2>Your Advice</h2>
     </div>
   );
 }
