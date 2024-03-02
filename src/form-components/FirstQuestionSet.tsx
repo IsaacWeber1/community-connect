@@ -4,6 +4,7 @@ import { Col, Form, Row } from "react-bootstrap";
 export function FirstQuestionSet(): JSX.Element {
 
     const [purpose, setPurpose] = useState<string>("");
+    const [travellerCount, setTravellerCount] = useState<number>(1);
     const [duration, setDuration] = useState<number>(0);
     const [needs, setNeeds] = useState<string>("");
     const [locations, setLocations] = useState<string>("");
@@ -24,12 +25,39 @@ export function FirstQuestionSet(): JSX.Element {
                 </Form.Control>
             </Form.Group>
             <hr></hr>
+            <Form.Group controlId="numberTravellingWith">
+                <Form.Label>How many people are you travelling with?</Form.Label>
+                <Form.Control
+                type="number"
+                value={travellerCount}
+                onChange={(event: React.ChangeEvent<HTMLInputElement>) => setTravellerCount(parseInt(event.target.value))}>
+                </Form.Control>
+            </Form.Group>
+            <hr></hr>
             <Form.Group controlId="howLongStaying">
                 <Form.Label>How long are you staying?</Form.Label>
                 <Form.Control
                 type="number"
                 value={duration}
                 onChange={(event: React.ChangeEvent<HTMLInputElement>) => setDuration(parseInt(event.target.value))}>
+                </Form.Control>
+            </Form.Group>
+            <hr></hr>
+            <Form.Group controlId="budgetForTrip">
+                <Form.Label>What is your budget?</Form.Label>
+                <Form.Control
+                type="number"
+                value={bugdet}
+                onChange={(event: React.ChangeEvent<HTMLInputElement>) => setBudget(parseInt(event.target.value))}>
+                </Form.Control>
+            </Form.Group>
+            <hr></hr>
+            <Form.Group controlId="ageOfUser">
+                <Form.Label>How old are you?</Form.Label>
+                <Form.Control
+                type="number"
+                value={age}
+                onChange={(event: React.ChangeEvent<HTMLInputElement>) => setAge(parseInt(event.target.value))}>
                 </Form.Control>
             </Form.Group>
             <hr></hr>
@@ -60,15 +88,6 @@ export function FirstQuestionSet(): JSX.Element {
                 onChange={() => setPreviouslyBeen(!previouslyBeen)}
             />
             <hr></hr>
-            <Form.Group controlId="ageOfUser">
-                <Form.Label>How old are you?</Form.Label>
-                <Form.Control
-                type="number"
-                value={age}
-                onChange={(event: React.ChangeEvent<HTMLInputElement>) => setAge(parseInt(event.target.value))}>
-                </Form.Control>
-            </Form.Group>
-            <hr></hr>
             <Form.Group controlId="interests/hobbies">
                 <Form.Label>What are your interests/hobbies?</Form.Label>
                 <Form.Control
@@ -91,15 +110,6 @@ export function FirstQuestionSet(): JSX.Element {
                 <Form.Control
                 value={dietaryInfo}
                 onChange={(event: React.ChangeEvent<HTMLInputElement>) => setDietaryInfo(event.target.value)}>
-                </Form.Control>
-            </Form.Group>
-            <hr></hr>
-            <Form.Group controlId="budgetForTrip">
-                <Form.Label>What is your budget?</Form.Label>
-                <Form.Control
-                type="number"
-                value={bugdet}
-                onChange={(event: React.ChangeEvent<HTMLInputElement>) => setBudget(parseInt(event.target.value))}>
                 </Form.Control>
             </Form.Group>
         </>
