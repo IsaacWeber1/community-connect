@@ -7,8 +7,6 @@ import { FirstQuestionSet } from './form-components/FirstQuestionSet'
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-      </header>
       <FirstQuestionSet></FirstQuestionSet>
     </div>
   );
