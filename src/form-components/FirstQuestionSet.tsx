@@ -19,10 +19,10 @@ export function FirstQuestionSet(): JSX.Element {
                 </Form.Control>
             </Form.Group>
             
-            <Form.Group controlId="reasonForTrip">
+            <Form.Group controlId="howLongStaying">
                 <Form.Label>How long are you staying?</Form.Label>
                 <Form.Control
-                value={purpose}
+                value={duration}
                 onChange={(event: React.ChangeEvent<HTMLInputElement>) => setPurpose(event.target.value)}>
                 </Form.Control>
             </Form.Group>
@@ -30,8 +30,9 @@ export function FirstQuestionSet(): JSX.Element {
             <Form.Group controlId="reasonForTrip">
                 <Form.Label>Do you have any specific needs? (Consider: food, phone, money, housing/lodging, job, language learning resources)</Form.Label>
                 <Form.Control
+                type="number"
                 value={purpose}
-                onChange={(event: React.ChangeEvent<HTMLInputElement>) => setPurpose(event.target.value)}>
+                onChange={(event: React.ChangeEvent<HTMLInputElement>) => setBudget(parseInt(event.target.value))}>
                 </Form.Control>
             </Form.Group>
 
