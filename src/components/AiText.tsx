@@ -37,6 +37,21 @@ const AiText = () => {
             <p>
                 HONKKKKK
             </p>
+            <div>
+                <div style={{ display: 'flex' }}>
+                    <input placeholder='thngs' onChange={(e) => handleChangeSearch(e)} />
+                    <button style={{ marginLeft: '20px' }} onClick={() => handleClick()}>VACATE</button>
+                </div>
+
+                {
+                    loading == true && (aiResponse == '') ?
+                        <p style={{ margin: '30px 0' }}>Loading ...</p>
+                        :
+                        <div style={{ margin: '30px 0' }}>
+                            <p>{aiResponse}</p>
+                        </div>
+                }
+            </div>
         </div>
         // WILL ADD AFTER THE FUN STUFF
     );

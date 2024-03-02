@@ -11,6 +11,8 @@ function App() {
       <h1>Connections AI</h1>
       <FirstQuestionSet></FirstQuestionSet>
       <h2>Your Advice</h2>
+      {<AiText />}
+      
     </div>
   );
 }
