@@ -16,7 +16,7 @@ export function FirstQuestionSet(): JSX.Element {
     const [origin, setOrigin] = useState<string>();
     const [dietaryInfo, setDietaryInfo] = useState<string>();
     const [budget, setBudget] = useState<number>();
-    const genAI = new GoogleGenerativeAI('AIzaSyBLTpKC-aCVOe3CLEKXTb03qWp8C3jaXAQ');
+    const genAI = new GoogleGenerativeAI('API_KEY_HERE');
 
     const [search, setSearch] = useState('');
     const [aiResponse, setResponse] = useState('');
