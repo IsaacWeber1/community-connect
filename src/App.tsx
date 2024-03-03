@@ -15,6 +15,12 @@ function App() {
           <img src={logo} alt="App Logo" style={{
             position: "relative"
           }}/>
+        
+        </div>
+        <div>
+        <img src= "https://thumbs.dreamstime.com/b/word-welcome-many-languages-sign-word-welcome-many-languages-sign-224727308.jpg" alt= "Picture" 
+        width = {1600} 
+        height = {300}/>
         </div>
       </header>
       <div className="App">
