@@ -3,24 +3,22 @@ import { Col, Form, Row } from "react-bootstrap";
 
 export function FirstQuestionSet(): JSX.Element {
 
-    const [destination, setDestination]= useState<string>("");
-    const [purpose, setPurpose] = useState<string>("");
-    const [beliefs, setBeliefs] = useState<string>("");
-    const [languages, setLanguages]= useState<string>("");
-    const [travellerCount, setTravellerCount] = useState<number>(1);
-    const [duration, setDuration] = useState<string>("");
-    const [needs, setNeeds] = useState<string>("");
-    const [locations, setLocations] = useState<string>("");
-    const [previouslyBeen, setPreviouslyBeen] = useState<boolean>(false);
-    const [age, setAge] = useState<number>(0);
+    const [destination, setDestination]= useState<string>();
+    const [purpose, setPurpose] = useState<string>();
+    const [beliefs, setBeliefs] = useState<string>();
+    const [languages, setLanguages]= useState<string>();
+    const [duration, setDuration] = useState<string>();
+    const [needs, setNeeds] = useState<string>();
+    const [locations, setLocations] = useState<string>();
+    const [age, setAge] = useState<number>();
     const [interests, setInterests] = useState<string>();
     const [origin, setOrigin] = useState<string>();
     const [dietaryInfo, setDietaryInfo] = useState<string>();
-    const [bugdet, setBudget] = useState<number>(0);
+    const [bugdet, setBudget] = useState<number>();
 
     return (
         <ol>
-            <h4>We will ask a feq questions to ensure your trip is personalized to your preferences</h4>
+            <h4>We will ask a few questions to ensure your trip is personalized to your preferences</h4>
             <br></br>
             <Form.Group controlId="placeVisiting">
                 <li>
@@ -85,11 +83,10 @@ export function FirstQuestionSet(): JSX.Element {
             <br></br>
             <Form.Group controlId="numberTravellingWith">
                 <li>
-                    <Form.Label>How many people are you travelling with?</Form.Label>
+                    <Form.Label>Are you traveling with anyone? If so, what type of group are you traveling with? (ie. family, friends, school)</Form.Label>
                     <Form.Control
-                    type="number"
-                    value={travellerCount}
-                    onChange={(event: React.ChangeEvent<HTMLInputElement>) => setTravellerCount(parseInt(event.target.value))}>
+                    value={interests}
+                    onChange={(event: React.ChangeEvent<HTMLInputElement>) => setInterests(event.target.value)}>
                     </Form.Control>
                 </li>
             </Form.Group>
@@ -117,10 +114,8 @@ export function FirstQuestionSet(): JSX.Element {
             <br></br>
             <Form.Group controlId="needs">
                 <li>
-                    <Form.Label>Do you have any specific needs? (Consider: food, phone, money, housing/lodging, job, language learning resources)</Form.Label>
+                    <Form.Label>Do you have any specific needs? (ie. food, phone, money, lodging, job, language resources)</Form.Label>
                     <Form.Control
-                    as="textarea"
-                    rows={3}
                     value={needs}
                     onChange={(event: React.ChangeEvent<HTMLInputElement>) => setNeeds(event.target.value)}>
                     </Form.Control>
@@ -131,31 +126,21 @@ export function FirstQuestionSet(): JSX.Element {
                 <li>
                     <Form.Label>If you are travelling for fun, do you have any specific places or activities of interest?</Form.Label>
                     <Form.Control
-                    as="textarea"
                     value={locations}
                     onChange={(event: React.ChangeEvent<HTMLInputElement>) => setLocations(event.target.value)}>
                     </Form.Control>
                 </li>
             </Form.Group>
             <br></br>
-            <Form.Group controlId="interests/hobbies">
-                <li>
-                    <Form.Label>What are your interests/hobbies?</Form.Label>
-                    <Form.Control
-                    type="textarea"
-                    value={interests}
-                    onChange={(event: React.ChangeEvent<HTMLInputElement>) => setInterests(event.target.value)}>
-                    </Form.Control>
-                </li>
-            </Form.Group>            
-            <br></br>
             <Form.Group controlId="hasDietaryRestrictions">
                 <li>
                     <Form.Label>Is ther eanything specific you hope to learn or discover while on your trip?</Form.Label>
-                    <Form.Control
-                    value={dietaryInfo}
-                    onChange={(event: React.ChangeEvent<HTMLInputElement>) => setDietaryInfo(event.target.value)}>
-                    </Form.Control>
+                    <span>
+                        <Form.Control
+                        value={dietaryInfo}
+                        onChange={(event: React.ChangeEvent<HTMLInputElement>) => setDietaryInfo(event.target.value)}>
+                        </Form.Control>
+                    </span>
                 </li>
             </Form.Group>
         </ol>
