@@ -14,7 +14,13 @@ export function FirstQuestionSet(): JSX.Element {
     const [interests, setInterests] = useState<string>();
     const [origin, setOrigin] = useState<string>();
     const [dietaryInfo, setDietaryInfo] = useState<string>();
-    const [bugdet, setBudget] = useState<number>();
+    const [budget, setBudget] = useState<number>();
+
+    const prompt = <>
+        I am making a trip to ${destination} and would like some help planning my trip.
+        The reason for my travel is ${purpose}.
+        My budget is around ${budget}.
+        </>
 
     return (
         <ol>
@@ -106,7 +112,7 @@ export function FirstQuestionSet(): JSX.Element {
                     <Form.Label>What is your budget for this trip?</Form.Label>
                     <Form.Control
                     type="number"
-                    value={bugdet}
+                    value={budget}
                     onChange={(event: React.ChangeEvent<HTMLInputElement>) => setBudget(parseInt(event.target.value))}>
                     </Form.Control>
                 </li>
