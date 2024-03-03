@@ -11,11 +11,12 @@ function App() {
       <header>
         <div className='App-header'>
           <img src={headerImg} alt="App Logo" style={{
-            position: "relative"
+            position: "relative",
+            width: "50%"
           }}/>
         </div>
       </header>
-      <div className="App" style={{ marginLeft: '40px' }}>
+      <div className="App">
         <FirstQuestionSet></FirstQuestionSet>
       </div>
     </>

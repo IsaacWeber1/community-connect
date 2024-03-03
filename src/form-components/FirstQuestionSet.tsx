@@ -62,7 +62,7 @@ export function FirstQuestionSet(): JSX.Element {
 
 
     return (
-        <div>
+        <div className="list-container">
             <ol>
                 <h4>We will ask a few questions to ensure your trip is personalized to your preferences</h4>
                 <br></br>
