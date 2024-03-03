@@ -26,7 +26,7 @@ export function FirstQuestionSet(): JSX.Element {
         setLoading(true);
         setResponse('');
         const model = genAI.getGenerativeModel({ model: "gemini-pro" });
-        const prompt = `Generate some information giving travel advice for a user with the following information. 
+        const prompt = `Identify the language of the following phrases "${destination}" and "${purpose}". Translate the following into that language and give an output based on the following prompt: 
                         I am visiting ${destination}.
                         My travel purpose is ${purpose}.
                         I speak ${languages}. 
