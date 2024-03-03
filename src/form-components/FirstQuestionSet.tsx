@@ -28,7 +28,7 @@ export function FirstQuestionSet(): JSX.Element {
         setResponse('');
         const model = genAI.getGenerativeModel({ model: "gemini-pro" });
         const prompt = `Generate some information giving travel advice for a user with the following information. 
-                        The person is visiting Prague ${destination}.
+                        The person is visiting ${destination}.
                         Their travel purpose is ${purpose}.
                         They speak ${languages}. 
                         They are ${age} years old. 
