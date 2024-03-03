@@ -27,23 +27,23 @@ export function FirstQuestionSet(): JSX.Element {
         setResponse('');
         const model = genAI.getGenerativeModel({ model: "gemini-pro" });
         const prompt = `Generate some information giving travel advice for a user with the following information. 
-                        The person is visiting ${destination}.
-                        Their travel purpose is ${purpose}.
-                        They speak ${languages}. 
-                        They are ${age} years old. 
-                        They are from ${origin}. 
-                        Their religious preference is ${beliefs}. 
-                        They are planning to stay for ${duration}.
-                        They are interested in visiting ${locations}.
-                        Their budget is ${budget}. 
-                        Their needs are ${needs}.
-                        Their hobbies include ${interests}.
-                        They have ${dietaryInfo} dietary restrictions.
+                        I am visiting ${destination}.
+                        My travel purpose is ${purpose}.
+                        I speak ${languages}. 
+                        I are ${age} years old. 
+                        I are from ${origin}. 
+                        My religious preference is ${beliefs}. 
+                        I am planning to stay for ${duration}.
+                        I Am interested in visiting ${locations}.
+                        My budget is ${budget}. 
+                        My needs are ${needs}.
+                        My hobbies include ${interests}.
+                        I have ${dietaryInfo} dietary restrictions.
 
 
-                        Provide concise advise on information about lodging, where they would like to visit, and other useful things
-                        based on their budget, dietary preferences, etc. Also keep the age of the user in mind. Use appropriate language
-                        and activity ideas for the age group.`;
+                        Provide concise advise on information about lodging, where I might like to visit, and other useful things
+                        based on my budget, dietary preferences, etc. Also keep my age of the user in mind. Use appropriate language
+                        and activity ideas for my age group. Do so in a nice formatting using line breaks. Use \n for a new line`;
         const result = await model.generateContent(prompt);
         const response = await result.response;
         const text = response.text();
@@ -191,12 +191,10 @@ export function FirstQuestionSet(): JSX.Element {
                 </Form.Group>
             </ol>
             <div>
-            <p>
-                HONKKKKK
-            </p>
+            <h2>Your Advice</h2>
             <div>
                 <div style={{ display: 'flex' }}>
-                    <input placeholder='thngs' onChange={(e) => handleChangeSearch(e)} />
+                    
                     <button style={{ marginLeft: '20px' }} onClick={() => handleClick()}>VACATE</button>
                 </div>
 
