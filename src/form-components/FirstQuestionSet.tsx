@@ -43,7 +43,7 @@ export function FirstQuestionSet(): JSX.Element {
 
                         Provide concise advise on information about lodging, where I might like to visit, and other useful things
                         based on my budget, dietary preferences, etc. Also keep my age of the user in mind. Use appropriate language
-                        and activity ideas for my age group. Do so in a nice formatting using line breaks. Use \n for a new line`;
+                        and activity ideas for my age group. Do so in a nice formatting using line breaks. Use a line break after each sentence.`;
         const result = await model.generateContent(prompt);
         const response = await result.response;
         const text = response.text();
@@ -203,7 +203,7 @@ export function FirstQuestionSet(): JSX.Element {
                         <p style={{ margin: '30px 0' }}>Loading ...</p>
                         :
                         <div style={{ margin: '30px 0' }}>
-                            <p>{aiResponse}</p>
+                            <pre><p>{aiResponse}</p></pre>
                         </div>
                 }
             </div>
