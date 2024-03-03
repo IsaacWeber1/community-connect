@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from 'community-connect/src/logo2.jpg';
+import logo from './logo2.jpg';
 import './App.css';
 import { Form } from 'react-bootstrap';
 import { FirstQuestionSet } from './form-components/FirstQuestionSet';
