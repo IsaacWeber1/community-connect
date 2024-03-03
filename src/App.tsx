@@ -23,7 +23,7 @@ function App() {
         height = {300}/>
         </div>
       </header>
-      <div className="App">
+      <div className="App" style={{ marginLeft: '40px' }}>
         <FirstQuestionSet></FirstQuestionSet>
       </div>
     </>
