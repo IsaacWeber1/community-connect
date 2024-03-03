@@ -15,7 +15,7 @@ function App() {
           }}/>
         </div>
       </header>
-      <div className="App">
+      <div className="App" style={{ marginLeft: '40px' }}>
         <FirstQuestionSet></FirstQuestionSet>
       </div>
     </>
