@@ -20,7 +20,7 @@ export function FirstQuestionSet(): JSX.Element {
         I am making a trip to ${destination} and would like some help planning my trip.
         The reason for my travel is ${purpose}.
         My budget is around ${budget}.
-        </>
+    </>
 
     return (
         <ol>
