@@ -15,7 +15,24 @@ const AiText = () => {
         setLoading(true);
         setResponse('');
         const model = genAI.getGenerativeModel({ model: "gemini-pro" });
-        const prompt = `tell me about your favorite anime`;
+        const prompt = `Generate some information giving travel advice for a user with the following information. 
+                        The person is visiting Prague ${destination}.
+                        Their travel purpose is ${purpose}.
+                        They speak ${languages}. 
+                        They are ${age} years old. 
+                        They are from ${origin}. 
+                        Their religious preference is ${beliefs}. 
+                        They are planning to stay for ${duration}.
+                        They are interested in visiting ${locations}.
+                        Their budget is ${budget}. 
+                        Their needs are ${needs}.
+                        Their hobbies include ${interests}.
+                        They have ${dietaryInfo} dietary restrictions.
+
+
+                        Provide concise advise on information about lodging, where they would like to visit, and other useful things
+                        based on their budget, dietary preferences, etc. Also keep the age of the user in mind. Use appropriate language
+                        and activity ideas for the age group.`;
         const result = await model.generateContent(prompt);
         const response = await result.response;
         const text = response.text();
