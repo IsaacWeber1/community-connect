@@ -119,7 +119,7 @@ export function FirstQuestionSet(): JSX.Element {
                 <br></br>
                 <Form.Group controlId="stateReligiousBeliefs">
                     <li>
-                        <Form.Label>Is ther eanything you would like to share about your religious beliefs?</Form.Label>
+                        <Form.Label>Is there anything you would like to share about your religious beliefs?</Form.Label>
                         <Form.Control
                         value={beliefs}
                         onChange={(event: React.ChangeEvent<HTMLInputElement>) => setBeliefs(event.target.value)}>
@@ -180,7 +180,7 @@ export function FirstQuestionSet(): JSX.Element {
                 <br></br>
                 <Form.Group controlId="hasDietaryRestrictions">
                     <li>
-                        <Form.Label>Is ther eanything specific you hope to learn or discover while on your trip?</Form.Label>
+                        <Form.Label>Is there anything specific you hope to learn or discover while on your trip?</Form.Label>
                         <span>
                             <Form.Control
                             value={dietaryInfo}
@@ -195,7 +195,7 @@ export function FirstQuestionSet(): JSX.Element {
             <div>
                 <div style={{ display: 'flex' }}>
                     
-                    <button style={{ marginLeft: '20px' }} onClick={() => handleClick()}>VACATE</button>
+                    <button style={{ marginLeft: '20px' }} onClick={() => handleClick()}>GENERATE RESPONSE</button>
                 </div>
 
                 {
