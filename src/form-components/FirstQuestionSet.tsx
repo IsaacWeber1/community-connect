@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Col, Form, Row } from "react-bootstrap";
+import {  Form} from "react-bootstrap";
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
 export function FirstQuestionSet(): JSX.Element {
@@ -18,7 +18,7 @@ export function FirstQuestionSet(): JSX.Element {
     const [budget, setBudget] = useState<number>();
     const genAI = new GoogleGenerativeAI('AIzaSyBLTpKC-aCVOe3CLEKXTb03qWp8C3jaXAQ');
 
-    const [search, setSearch] = useState('');
+    //const [search, setSearch] = useState('');
     const [aiResponse, setResponse] = useState('');
     const [loading, setLoading] = useState(false);
 
@@ -51,10 +51,10 @@ export function FirstQuestionSet(): JSX.Element {
         setLoading(false);
     }
 
-    const handleChangeSearch = (e: { target: { value: React.SetStateAction<string>; }; }) => {
-        // ii have no idea what the line above means my ide auto changed it
-        setSearch(e.target.value);
-    }
+    // const handleChangeSearch = (e: { target: { value: React.SetStateAction<string>; }; }) => {
+    //     // ii have no idea what the line above means my ide auto changed it
+    //     setSearch(e.target.value);
+    // }
 
     const handleClick = () => {
         aiRun();
@@ -199,7 +199,7 @@ export function FirstQuestionSet(): JSX.Element {
                 </div>
 
                 {
-                    loading == true && (aiResponse == '') ?
+                    loading === true && (aiResponse === '') ?
                         <p style={{ margin: '30px 0' }}>Loading ...</p>
                         :
                         <div style={{ margin: '30px 0' }}>
