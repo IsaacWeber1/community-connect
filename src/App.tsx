@@ -2,7 +2,7 @@ import React from 'react';
 import headerImg from './Background.jpg';
 import './App.css';
 //import { Form } from 'react-bootstrap';
-import { FirstQuestionSet } from './form-components/FirstQuestionSet';
+import { FirstQuestionSet } from './Components/FirstQuestionSet';
 //import { Header } from 'react-bootstrap/lib/Navbar';
 
 function App() {
