@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import { Form, Container, Row, Col, Button } from 'react-bootstrap';
-import { GoogleGenerativeAI } from "@google/generative-ai";
-import { CustomBudget } from "../Interfaces/CustomBudget";
+import { Form, Row, Col, Button } from 'react-bootstrap';
+//import { GoogleGenerativeAI } from "@google/generative-ai";
+//import { CustomBudget } from "../Interfaces/CustomBudget";
 
 export function FirstQuestionSet(): JSX.Element {
 
