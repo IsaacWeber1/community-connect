@@ -3,7 +3,7 @@
 > react-scripts test --coverage
 
 FAIL src/App.test.tsx
-  ✕ renders learn react link (64 ms)
+  ✕ renders learn react link (72 ms)
 
   ● renders learn react link
 
@@ -26,6 +26,172 @@ FAIL src/App.test.tsx
         [36m<div[39m
           [33mclass[39m=[32m"App"[39m
         [36m>[39m
+          [36m<div>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"row"[39m
+            [36m>[39m
+              [36m<div[39m
+                [33mclass[39m=[32m"col"[39m
+              [36m>[39m
+                [36m<ul>[39m
+                  [36m<li>[39m
+                    [36m<div[39m
+                      [33mclass[39m=[32m"form-check"[39m
+                    [36m>[39m
+                      [36m<input[39m
+                        [33mclass[39m=[32m"form-check-input"[39m
+                        [33mid[39m=[32m"location of lodging"[39m
+                        [33mtype[39m=[32m"checkbox"[39m
+                      [36m/>[39m
+                      [36m<label[39m
+                        [33mclass[39m=[32m"form-check-label"[39m
+                        [33mfor[39m=[32m"location of lodging"[39m
+                        [33mtitle[39m=[32m""[39m
+                      [36m>[39m
+                        [0mlocation of lodging[0m
+                      [36m</label>[39m
+                    [36m</div>[39m
+                  [36m</li>[39m
+                  [36m<li>[39m
+                    [36m<div[39m
+                      [33mclass[39m=[32m"form-check"[39m
+                    [36m>[39m
+                      [36m<input[39m
+                        [33mclass[39m=[32m"form-check-input"[39m
+                        [33mid[39m=[32m"how nice lodging is"[39m
+                        [33mtype[39m=[32m"checkbox"[39m
+                      [36m/>[39m
+                      [36m<label[39m
+                        [33mclass[39m=[32m"form-check-label"[39m
+                        [33mfor[39m=[32m"how nice lodging is"[39m
+                        [33mtitle[39m=[32m""[39m
+                      [36m>[39m
+                        [0mhow nice lodging is[0m
+                      [36m</label>[39m
+                    [36m</div>[39m
+                  [36m</li>[39m
+                  [36m<li>[39m
+                    [36m<div[39m
+                      [33mclass[39m=[32m"form-check"[39m
+                    [36m>[39m
+                      [36m<input[39m
+                        [33mclass[39m=[32m"form-check-input"[39m
+                        [33mid[39m=[32m"food"[39m
+                        [33mtype[39m=[32m"checkbox"[39m
+                      [36m/>[39m
+                      [36m<label[39m
+                        [33mclass[39m=[32m"form-check-label"[39m
+                        [33mfor[39m=[32m"food"[39m
+                        [33mtitle[39m=[32m""[39m
+                      [36m>[39m
+                        [0mfood[0m
+                      [36m</label>[39m
+                    [36m</div>[39m
+                  [36m</li>[39m
+                  [36m<li>[39m
+                    [36m<div[39m
+                      [33mclass[39m=[32m"form-check"[39m
+                    [36m>[39m
+                      [36m<input[39m
+                        [33mclass[39m=[32m"form-check-input"[39m
+                        [33mid[39m=[32m"culture"[39m
+                        [33mtype[39m=[32m"checkbox"[39m
+                      [36m/>[39m
+                      [36m<label[39m
+                        [33mclass[39m=[32m"form-check-label"[39m
+                        [33mfor[39m=[32m"culture"[39m
+                        [33mtitle[39m=[32m""[39m
+                      [36m>[39m
+                        [0mculture[0m
+                      [36m</label>[39m
+                    [36m</div>[39m
+                  [36m</li>[39m
+                  [36m<li>[39m
+                    [36m<div[39m
+                      [33mclass[39m=[32m"form-check"[39m
+                    [36m>[39m
+                      [36m<input[39m
+                        [33mclass[39m=[32m"form-check-input"[39m
+                        [33mid[39m=[32m"history"[39m
+                        [33mtype[39m=[32m"checkbox"[39m
+                      [36m/>[39m
+                      [36m<label[39m
+                        [33mclass[39m=[32m"form-check-label"[39m
+                        [33mfor[39m=[32m"history"[39m
+                        [33mtitle[39m=[32m""[39m
+                      [36m>[39m
+                        [0mhistory[0m
+                      [36m</label>[39m
+                    [36m</div>[39m
+                  [36m</li>[39m
+                  [36m<li>[39m
+                    [36m<div[39m
+                      [33mclass[39m=[32m"form-check"[39m
+                    [36m>[39m
+                      [36m<input[39m
+                        [33mclass[39m=[32m"form-check-input"[39m
+                        [33mid[39m=[32m"live music"[39m
+                        [33mtype[39m=[32m"checkbox"[39m
+                      [36m/>[39m
+                      [36m<label[39m
+                        [33mclass[39m=[32m"form-check-label"[39m
+                        [33mfor[39m=[32m"live music"[39m
+                        [33mtitle[39m=[32m""[39m
+                      [36m>[39m
+                        [0mlive music[0m
+                      [36m</label>[39m
+                    [36m</div>[39m
+                  [36m</li>[39m
+                  [36m<li>[39m
+                    [36m<div[39m
+                      [33mclass[39m=[32m"form-check"[39m
+                    [36m>[39m
+                      [36m<input[39m
+                        [33mclass[39m=[32m"form-check-input"[39m
+                        [33mid[39m=[32m"night life"[39m
+                        [33mtype[39m=[32m"checkbox"[39m
+                      [36m/>[39m
+                      [36m<label[39m
+                        [33mclass[39m=[32m"form-check-label"[39m
+                        [33mfor[39m=[32m"night life"[39m
+                        [33mtitle[39m=[32m""[39m
+                      [36m>[39m
+                        [0mnight life[0m
+                      [36m</label>[39m
+                    [36m</div>[39m
+                  [36m</li>[39m
+                  [36m<li>[39m
+                    [36m<div[39m
+                      [33mclass[39m=[32m"form-check"[39m
+                    [36m>[39m
+                      [36m<input[39m
+                        [33mclass[39m=[32m"form-check-input"[39m
+                        [33mid[39m=[32m"other (replace with anything else you want)"[39m
+                        [33mtype[39m=[32m"checkbox"[39m
+                      [36m/>[39m
+                      [36m<label[39m
+                        [33mclass[39m=[32m"form-check-label"[39m
+                        [33mfor[39m=[32m"other (replace with anything else you want)"[39m
+                        [33mtitle[39m=[32m""[39m
+                      [36m>[39m
+                        [0mother (replace with anything else you want)[0m
+                      [36m</label>[39m
+                    [36m</div>[39m
+                  [36m</li>[39m
+                [36m</ul>[39m
+              [36m</div>[39m
+              [36m<div[39m
+                [33mclass[39m=[32m"col"[39m
+              [36m>[39m
+                [36m<div>[39m
+                  [36m<h3>[39m
+                    [0mConfigure Budget[0m
+                  [36m</h3>[39m
+                  [36m<ol />[39m
+                [36m</div>[39m
+              [36m</div>[39m
+            [36m</div>[39m
+          [36m</div>[39m
           [36m<div[39m
             [33mclass[39m=[32m"list-container"[39m
           [36m>[39m
@@ -56,11 +222,44 @@ FAIL src/App.test.tsx
                     [33mclass[39m=[32m"form-label"[39m
                     [33mfor[39m=[32m"reasonForTrip"[39m
                   [36m>[39m
-                    [0mWhat language(s) do you speak?[0m
+                    [0mWhat is the purpose of your travel?[0m
                   [36m</label>[39m
                   [36m<input[39m
                     [33mclass[39m=[32m"form-control"[39m
                     [33mid[39m=[32m"reasonForTrip"[39m
+                    [33mvalue[39m=[32m""[39m
+                  [36m/>[39m
+                [36m</li>[39m
+              [36m</div>[39m
+              [36m<br />[39m
+              [36m<div>[39m
+                [36m<li>[39m
+                  [36m<label[39m
+                    [33mclass[39m=[32m"form-label"[39m
+                    [33mfor[39m=[32m"budgetForTrip"[39m
+                  [36m>[39m
+                    [0mWhat is your budget for this trip?[0m
+                  [36m</label>[39m
+                  [36m<input[39m
+                    [33mclass[39m=[32m"form-control"[39m
+                    [33mid[39m=[32m"budgetForTrip"[39m
+                    [33mtype[39m=[32m"number"[39m
+                    [33mvalue[39m=[32m""[39m
+                  [36m/>[39m
+                [36m</li>[39m
+              [36m</div>[39m
+              [36m<br />[39m
+              [36m<div>[39m
+                [36m<li>[39m
+                  [36m<label[39m
+                    [33mclass[39m=[32m"form-label"[39m
+                    [33mfor[39m=[32m"langueage"[39m
+                  [36m>[39m
+                    [0mWhat language(s) do you speak?[0m
+                  [36m</label>[39m
+                  [36m<input[39m
+                    [33mclass[39m=[32m"form-control"[39m
+                    [33mid[39m=[32m"langueage"[39m
                     [33mvalue[39m=[32m""[39m
                   [36m/>[39m
                 [36m</li>[39m
@@ -94,22 +293,6 @@ FAIL src/App.test.tsx
                   [36m<input[39m
                     [33mclass[39m=[32m"form-control"[39m
                     [33mid[39m=[32m"homeCountry/Location"[39m
-                    [33mvalue[39m=[32m""[39m
-                  [36m/>[39m
-                [36m</li>[39m
-              [36m</div>[39m
-              [36m<br />[39m
-              [36m<div>[39m
-                [36m<li>[39m
-                  [36m<label[39m
-                    [33mclass[39m=[32m"form-label"[39m
-                    [33mfor[39m=[32m"reasonForTrip"[39m
-                  [36m>[39m
-                    [0mWhat is the purpose of your travel?[0m
-                  [36m</label>[39m
-                  [36m<input[39m
-                    [33mclass[39m=[32m"form-control"[39m
-                    [33mid[39m=[32m"reasonForTrip"[39m
                     [33mvalue[39m=[32m""[39m
                   [36m/>[39m
                 [36m</li>[39m
@@ -167,23 +350,6 @@ FAIL src/App.test.tsx
                 [36m<li>[39m
                   [36m<label[39m
                     [33mclass[39m=[32m"form-label"[39m
-                    [33mfor[39m=[32m"budgetForTrip"[39m
-                  [36m>[39m
-                    [0mWhat is your budget for this trip?[0m
-                  [36m</label>[39m
-                  [36m<input[39m
-                    [33mclass[39m=[32m"form-control"[39m
-                    [33mid[39m=[32m"budgetForTrip"[39m
-                    [33mtype[39m=[32m"number"[39m
-                    [33mvalue[39m=[32m""[39m
-                  [36m/>[39m
-                [36m</li>[39m
-              [36m</div>[39m
-              [36m<br />[39m
-              [36m<div>[39m
-                [36m<li>[39m
-                  [36m<label[39m
-                    [33mclass[39m=[32m"form-label"[39m
                     [33mfor[39m=[32m"needs"[39m
                   [36m>[39m
                     [0mDo you have any specific needs? (ie. food, phone, money, lodging, job, language resources)[0m
@@ -230,29 +396,6 @@ FAIL src/App.test.tsx
                 [36m</li>[39m
               [36m</div>[39m
             [36m</ol>[39m
-            [36m<div>[39m
-              [36m<h2>[39m
-                [0mYour Advice[0m
-              [36m</h2>[39m
-              [36m<div>[39m
-                [36m<div[39m
-                  [33mstyle[39m=[32m"display: flex;"[39m
-                [36m>[39m
-                  [36m<button[39m
-                    [33mstyle[39m=[32m"margin-left: 20px;"[39m
-                  [36m>[39m
-                    [0mGENERATE RESPONSE[0m
-                  [36m</button>[39m
-                [36m</div>[39m
-                [36m<div[39m
-                  [33mstyle[39m=[32m"margin: 30px 0px;"[39m
-                [36m>[39m
-                  [36m<pre>[39m
-                    [36m<p />[39m
-                  [36m</pre>[39m
-                [36m</div>[39m
-              [36m</div>[39m
-            [36m</div>[39m
           [36m</div>[39m
         [36m</div>[39m
       [36m</div>[39m
@@ -276,21 +419,24 @@ FAIL src/App.test.tsx
       at _run10000 (node_modules/@jest/core/build/cli/index.js:320:7)
       at runCLI (node_modules/@jest/core/build/cli/index.js:173:3)
 
------------------------|---------|----------|---------|---------|-------------------
-File                   | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
------------------------|---------|----------|---------|---------|-------------------
-All files              |   34.61 |       25 |   10.52 |   34.61 |                   
- src                   |    8.33 |        0 |   33.33 |    8.33 |                   
-  App.tsx              |     100 |      100 |     100 |     100 |                   
-  index.tsx            |       0 |      100 |     100 |       0 | 7-19              
-  reportWebVitals.ts   |       0 |        0 |       0 |       0 | 3-10              
- src/form-components   |    42.5 |       50 |    6.25 |    42.5 |                   
-  FirstQuestionSet.tsx |    42.5 |       50 |    6.25 |    42.5 | 26-51,60,74-198   
------------------------|---------|----------|---------|---------|-------------------
+-----------------------|---------|----------|---------|---------|--------------------------
+File                   | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s        
+-----------------------|---------|----------|---------|---------|--------------------------
+All files              |   26.58 |        0 |    12.5 |   26.66 |                          
+ src                   |    8.33 |        0 |   33.33 |    8.33 |                          
+  App.tsx              |     100 |      100 |     100 |     100 |                          
+  index.tsx            |       0 |      100 |     100 |       0 | 7-19                     
+  reportWebVitals.ts   |       0 |        0 |       0 |       0 | 3-10                     
+ src/Components        |   29.85 |        0 |   10.34 |   30.15 |                          
+  FirstQuestionSet.tsx |   39.21 |        0 |      12 |   40.42 | 33-36,40-45,49-55,83-226 
+  Response.tsx         |       0 |        0 |       0 |       0 | 48-78                    
+ src/Interfaces        |       0 |        0 |       0 |       0 |                          
+  CustomBudget.ts      |       0 |        0 |       0 |       0 |                          
+-----------------------|---------|----------|---------|---------|--------------------------
 Test Suites: 1 failed, 1 total
 Tests:       1 failed, 1 total
 Snapshots:   0 total
-Time:        2.962 s
+Time:        3.217 s
 Ran all test suites.
 [0;33mOne of your dependencies, babel-preset-react-app, is importing the
 "@babel/plugin-proposal-private-property-in-object" package without
