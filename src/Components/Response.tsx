@@ -1,7 +1,5 @@
 import React, { useState } from "react";
-import { Form, Container, Row, Col } from 'react-bootstrap';
 import { GoogleGenerativeAI } from "@google/generative-ai";
-import { CustomBudget } from "../Interfaces/CustomBudget";
 
 export function Response({
     prompt,

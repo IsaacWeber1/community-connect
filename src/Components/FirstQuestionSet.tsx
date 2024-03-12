@@ -1,16 +1,10 @@
 import React, { useState } from "react";
-import { Form, Row, Col, Button } from 'react-bootstrap';
+import { Form, } from 'react-bootstrap';
 import { Response } from "./Response";
 //import { GoogleGenerativeAI } from "@google/generative-ai";
 //import { CustomBudget } from "../Interfaces/CustomBudget";
 
 export function FirstQuestionSet(): JSX.Element {
-
-    const priorities = [
-        "location of lodging", "how nice lodging is", "food",
-        "culture", "history", "live music",
-        "night life", "other (replace with anything else you want)"
-    ];
 
     const [destination, setDestination]= useState<string>();
     const [purpose, setPurpose] = useState<string>();
@@ -178,7 +172,7 @@ export function FirstQuestionSet(): JSX.Element {
                         </li>
                     </Form.Group>
                 </ol>
-                <Response prompt={generatePrompt()} />
+                <Response prompt={generatePrompt()}/>
             </div>
     )
 }
