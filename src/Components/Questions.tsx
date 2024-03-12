@@ -4,7 +4,7 @@ import { Response } from "./Response";
 //import { GoogleGenerativeAI } from "@google/generative-ai";
 //import { CustomBudget } from "../Interfaces/CustomBudget";
 
-export function FirstQuestionSet(): JSX.Element {
+export function Questions(): JSX.Element {
 
     const [destination, setDestination]= useState<string>();
     const [purpose, setPurpose] = useState<string>();
