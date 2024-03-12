@@ -7,19 +7,6 @@ export function Budget(): JSX.Element {
         "culture", "history", "live music",
         "night life", "other (replace with anything else you want)"
     ];
-
-    const [destination, setDestination]= useState<string>();
-    const [purpose, setPurpose] = useState<string>();
-    const [beliefs, setBeliefs] = useState<string>();
-    const [languages, setLanguages]= useState<string>();
-    const [duration, setDuration] = useState<string>();
-    const [needs, setNeeds] = useState<string>();
-    const [locations, setLocations] = useState<string>();
-    const [age, setAge] = useState<number>();
-    const [interests, setInterests] = useState<string>();
-    const [origin, setOrigin] = useState<string>();
-    const [dietaryInfo, setDietaryInfo] = useState<string>();
-    const [budget, setBudget] = useState<number>();
     const [chosenPriorities, setChosenPriorities] = useState<string[]>([]);
     // const handleChangeSearch = (e: { target: { value: React.SetStateAction<string>; }; }) => {
     //     // ii have no idea what the line above means my ide auto changed it
@@ -52,8 +39,8 @@ export function Budget(): JSX.Element {
             setChosenPriorities(newPriorities);
         }
     }
-    /** 
-     * <div>
+    return (
+        <div>
         <Row>
             <Col>
                 <ul>
@@ -95,49 +82,5 @@ export function Budget(): JSX.Element {
             </Col>
         </Row>
     </div>
-     */
-    return (
-        <div>
-            <Row>
-                <Col>
-                    <ul>
-                        {priorities.map((priority) => (
-                            <li key={priority}>
-                                <Form.Check
-                                    type="checkbox"
-                                    id={priority}
-                                    label={priority}
-                                    onChange={updatePriorities(priority)}
-                                />
-                            </li>
-                        ))}
-                    </ul>
-                </Col>
-                <Col>
-                    <div>
-                        <h3>Configure Budget</h3>
-                        <ol>
-                            {chosenPriorities.map((priority) => (
-                                <li key={priority}>
-                                    <Button
-                                        variant="outline-secondary"
-                                        size="sm"
-                                        onClick={() => pushUp(priority)}
-                                    >⬆️</Button>
-                                    {' '}
-                                    <Button
-                                        variant="outline-secondary"
-                                        size="sm"
-                                        onClick={() => pushDown(priority)}
-                                    >⬇️</Button>
-                                    {' '}
-                                    {priority}
-                                </li>
-                            ))}
-                        </ol>
-                    </div>
-                </Col>
-            </Row>
-        </div>
     )
 }
