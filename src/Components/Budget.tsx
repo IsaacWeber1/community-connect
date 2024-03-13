@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import { Form, Row, Col, Button } from 'react-bootstrap';
 
-export function Budget(): JSX.Element {
-    const priorities = [
-        "location of lodging", "how nice lodging is", "food",
-        "culture", "history", "live music",
-        "night life", "other (replace with anything else you want)"
-    ];
+export function Budget({
+    categories
+}: {
+    categories: string
+}): JSX.Element {
+    const priorities = categories.split(",");
     const [chosenPriorities, setChosenPriorities] = useState<string[]>([]);
     // const handleChangeSearch = (e: { target: { value: React.SetStateAction<string>; }; }) => {
     //     // ii have no idea what the line above means my ide auto changed it

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Form, } from 'react-bootstrap';
 import { Response } from "./Response";
+import { Budget } from "./Budget";
 //import { GoogleGenerativeAI } from "@google/generative-ai";
 //import { CustomBudget } from "../Interfaces/CustomBudget";
 
@@ -8,40 +9,58 @@ export function Questions(): JSX.Element {
 
     const [destination, setDestination]= useState<string>();
     const [purpose, setPurpose] = useState<string>();
-    const [beliefs, setBeliefs] = useState<string>();
     const [languages, setLanguages]= useState<string>();
     const [duration, setDuration] = useState<string>();
     const [needs, setNeeds] = useState<string>();
     const [locations, setLocations] = useState<string>();
     const [age, setAge] = useState<number>();
     const [interests, setInterests] = useState<string>();
-    const [origin, setOrigin] = useState<string>();
     const [dietaryInfo, setDietaryInfo] = useState<string>();
     const [budget, setBudget] = useState<number>();
 
+    const [response, setResponse] = useState<string>("");
+
     const generatePrompt = (): string => {
         return (
-            `Identify the language of the following phrases "${destination}", "${languages}", "${age}", "${origin}", "${beliefs}", "${duration}", "${locations}", "${budget}", "${needs}", "${interests}", "${dietaryInfo}" and "${purpose}". Translate the following into that language and give an output based on the following prompt: 
-            I am visiting ${destination}.
-            My travel purpose is ${purpose}.
-            I speak ${languages}.
-            I are ${age} years old.
-            I are from ${origin}.
-            My religious preference is ${beliefs}. 
-            I am planning to stay for ${duration}.
-            I Am interested in visiting ${locations}.
-            My budget is ${budget}. 
-            My needs are ${needs}.
-            My hobbies include ${interests}.
-            I have ${dietaryInfo} dietary restrictions.
-
-
-            Provide concise advise on information about lodging, where I might like to visit, and other useful things
-            based on my budget, dietary preferences, etc. Also keep my age of the user in mind. Use appropriate language
-            and activity ideas for my age group. Do so in a nice formatting using line breaks. Use a line break after each sentence.  Also use a line break if a line is more than 90 characters.`
+            `Based on the following details about a trip, generate a list of comma-separated categories that could influence the budget planning. Details are: \n` +
+            `- Visiting: ${destination}\n` +
+            `- Travel purpose: ${purpose}\n` +
+            `- Languages spoken: ${languages}\n` +
+            `- Age: ${age}\n` +
+            `- Planned stay duration: ${duration} days\n` +
+            `- Places of interest: ${locations}\n` +
+            `- Budget: ${budget} dollars\n` +
+            `- Specific needs: ${needs}\n` +
+            `- Hobbies: ${interests}\n` +
+            `- Dietary restrictions: ${dietaryInfo}\n\n` +
+            `Use the information to identify categories such as lodging, transportation, food, activities, and any special requirements based on the dietary restrictions or needs. The list should directly reflect factors that would affect the overall budget for the trip.\n\n` +
+            `For example, if the traveler is interested in "history and museums" and has a "gluten-free diet", the categories could include "museum tickets, gluten-free dining options". Include any category that you think is relevant based on the provided trip details.`
         )
-    }
+    }    
 
+    /** 
+     * <br></br>
+                    <Form.Group controlId="homeCountry/Location">
+                        <li>
+                            <Form.Label>Where are you from?</Form.Label>
+                            <Form.Control
+                                value={origin}
+                                onChange={(event: React.ChangeEvent<HTMLInputElement>) => setOrigin(event.target.value)}>
+                            </Form.Control>
+                        </li>
+                    </Form.Group>
+                    
+                    <br></br>
+                    <Form.Group controlId="stateReligiousBeliefs">
+                        <li>
+                            <Form.Label>Is there anything you would like to share about your religious beliefs?</Form.Label>
+                            <Form.Control
+                                value={beliefs}
+                                onChange={(event: React.ChangeEvent<HTMLInputElement>) => setBeliefs(event.target.value)}>
+                            </Form.Control>
+                        </li>
+                    </Form.Group>
+     */
 
     return (
         <div className="list-container">
@@ -68,9 +87,20 @@ export function Questions(): JSX.Element {
                         </li>
                     </Form.Group>
                     <br></br>
+                    <Form.Group controlId="howLongStaying">
+                        <li>
+                            <Form.Label>How long are you planning to stay? (in days) </Form.Label>
+                            <Form.Control
+                                type="number"
+                                value={duration}
+                                onChange={(event: React.ChangeEvent<HTMLInputElement>) => setDuration(event.target.value)}>
+                            </Form.Control>
+                        </li>
+                    </Form.Group>
+                    <br></br>
                     <Form.Group controlId="budgetForTrip">
                         <li>
-                            <Form.Label>What is your budget for this trip?</Form.Label>
+                            <Form.Label>What is your budget for this trip? (in $) </Form.Label>
                             <Form.Control
                                 type="number"
                                 value={budget}
@@ -100,42 +130,12 @@ export function Questions(): JSX.Element {
                         </li>
                     </Form.Group>
                     <br></br>
-                    <Form.Group controlId="homeCountry/Location">
-                        <li>
-                            <Form.Label>Where are you from?</Form.Label>
-                            <Form.Control
-                                value={origin}
-                                onChange={(event: React.ChangeEvent<HTMLInputElement>) => setOrigin(event.target.value)}>
-                            </Form.Control>
-                        </li>
-                    </Form.Group>
-                    <br></br>
-                    <Form.Group controlId="stateReligiousBeliefs">
-                        <li>
-                            <Form.Label>Is there anything you would like to share about your religious beliefs?</Form.Label>
-                            <Form.Control
-                                value={beliefs}
-                                onChange={(event: React.ChangeEvent<HTMLInputElement>) => setBeliefs(event.target.value)}>
-                            </Form.Control>
-                        </li>
-                    </Form.Group>
-                    <br></br>
                     <Form.Group controlId="numberTravellingWith">
                         <li>
                             <Form.Label>Are you traveling with anyone? If so, what type of group are you traveling with? (ie. family, friends, school)</Form.Label>
                             <Form.Control
                                 value={interests}
                                 onChange={(event: React.ChangeEvent<HTMLInputElement>) => setInterests(event.target.value)}>
-                            </Form.Control>
-                        </li>
-                    </Form.Group>
-                    <br></br>
-                    <Form.Group controlId="howLongStaying">
-                        <li>
-                            <Form.Label>How long are you planning to stay?</Form.Label>
-                            <Form.Control
-                                value={duration}
-                                onChange={(event: React.ChangeEvent<HTMLInputElement>) => setDuration(event.target.value)}>
                             </Form.Control>
                         </li>
                     </Form.Group>
@@ -172,7 +172,14 @@ export function Questions(): JSX.Element {
                         </li>
                     </Form.Group>
                 </ol>
-                <Response prompt={generatePrompt()}/>
+                <Response 
+                    prompt={generatePrompt()}
+                    nextQuestion={response}
+                    setNextQuestion={setResponse}
+                />
+                <Budget
+                    categories={response}
+                ></Budget>
             </div>
     )
 }
