@@ -8,6 +8,7 @@ import { Questions } from './Components/Questions';
 
 function App() {
   //const [categories, setCategoties] = useState<string>;
+  // new comment to make the website work!!!!
 
   return (
     <>
