@@ -22,7 +22,7 @@ export function Questions(): JSX.Element {
 
     const generatePrompt = (): string => {
         return (
-            `Based on the following details about a trip, generate a list of comma-separated categories that could influence budget planning of the user. Details are: \n` +
+            `Based on the following details about a trip, generate a list of comma-separated categories that might influence budget planning of the user. Details are: \n` +
             `- Visiting: ${destination}\n` +
             `- Travel purpose: ${purpose}\n` +
             `- Languages spoken: ${languages}\n` +
