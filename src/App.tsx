@@ -21,7 +21,7 @@ function App() {
       </header>
       <div className="App">
         <Questions></Questions>
-        <Budget></Budget>
+        {/*<Budget></Budget>*/}
       </div>
     </>
   );
